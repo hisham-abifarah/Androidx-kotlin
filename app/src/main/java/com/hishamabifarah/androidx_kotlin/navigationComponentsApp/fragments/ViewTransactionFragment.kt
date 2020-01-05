@@ -1,4 +1,4 @@
-package com.hishamabifarah.androidx_kotlin.fragments
+package com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments
 
 
 import android.os.Bundle

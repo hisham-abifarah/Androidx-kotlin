@@ -1,7 +1,8 @@
-package com.hishamabifarah.androidx_kotlin
+package com.hishamabifarah.androidx_kotlin.navigationComponentsApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.hishamabifarah.androidx_kotlin.R
 
 class MainActivity : AppCompatActivity() {
 

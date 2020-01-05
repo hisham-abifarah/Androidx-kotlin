@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Androidx-kotlin</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_button_navigation">Navigation Components</string>
+    <string name="home_button_mvvm_movie_app">MVVM movie app</string>
 </resources>

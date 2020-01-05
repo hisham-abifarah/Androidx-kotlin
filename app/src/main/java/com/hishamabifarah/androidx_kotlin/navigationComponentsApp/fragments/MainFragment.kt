@@ -1,4 +1,4 @@
-package com.hishamabifarah.androidx_kotlin.fragments
+package com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,10 +11,11 @@ import androidx.navigation.Navigation
 
 import com.hishamabifarah.androidx_kotlin.R
 
-// implements View.OnClickListener interface
-// implement onClick() for OnClickListener interface
-// define navController, ':' means of type NavController ,'?' means can be null
-// instantiate navController when view is created => override onViewCreated method
+//todo notes: implement button click inside Fragment
+    // implements View.OnClickListener interface
+    // implement onClick() for OnClickListener interface
+    // define navController, ':' means of type NavController ,'?' means can be null
+    // instantiate navController when view is created => override onViewCreated method
 
 class MainFragment : Fragment() , View.OnClickListener {
 

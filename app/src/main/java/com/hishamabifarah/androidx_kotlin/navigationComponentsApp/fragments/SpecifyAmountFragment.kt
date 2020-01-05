@@ -1,5 +1,4 @@
-package com.hishamabifarah.androidx_kotlin.fragments
-
+package com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,31 +11,31 @@ import androidx.navigation.Navigation
 
 import com.hishamabifarah.androidx_kotlin.R
 
-class ChooseRecipientFragment : Fragment() , View.OnClickListener {
-    var navController:NavController ? = null
+class SpecifyAmountFragment : Fragment() , View.OnClickListener {
+
+    lateinit var navController : NavController
+
+    override fun onClick(v: View?) {
+        when(v!!.id){
+            R.id.send_btn ->{
+                navController.navigate(R.id.action_specifyAmountFragment_to_confirmationFragment)
+            }
+            R.id.cancel_btn -> activity!!.onBackPressed()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_choose_recipient, container, false)
-    }
-
-    override fun onClick(v: View?) {
-        when(v!!.id){
-            R.id.next_btn ->{
-                navController!!.navigate(R.id.action_chooseRecipientFragment_to_specifyAmountFragment)
-            }
-            R.id.cancel_btn -> activity!!.onBackPressed()
-        }
+        return inflater.inflate(R.layout.fragment_specify_amount, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.next_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.send_btn).setOnClickListener(this)
         view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
     }
 }

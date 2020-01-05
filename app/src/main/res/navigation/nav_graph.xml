@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.MainFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.MainFragment"
         android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_viewTransactionFragment"
@@ -35,12 +35,12 @@
 
     <fragment
         android:id="@+id/viewTransactionFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.ViewTransactionFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.ViewTransactionFragment"
         android:label="ViewTransactionFragment" />
 
     <fragment
         android:id="@+id/chooseRecipientFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.ChooseRecipientFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.ChooseRecipientFragment"
         android:label="ChooseRecipientFragment">
         <action
             android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
@@ -53,13 +53,13 @@
 
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.ConfirmationFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.ConfirmationFragment"
         android:label="ConfirmationFragment"/>
 
 
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.SpecifyAmountFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.SpecifyAmountFragment"
         android:label="SpecifyAmountFragment">
 
         <argument
@@ -77,6 +77,6 @@
 
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.hishamabifarah.androidx_kotlin.fragments.ViewBalanceFragment"
+        android:name="com.hishamabifarah.androidx_kotlin.navigationComponentsApp.fragments.ViewBalanceFragment"
         android:label="ViewBalanceFragment" />
 </navigation>
