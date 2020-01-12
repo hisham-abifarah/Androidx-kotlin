@@ -37,6 +37,9 @@ interface TheMovieDBInterface {
     fun getMovieDetails(@Path("movie_id")id:Int) : Single<MovieDetails>
 
     @GET("movie/popular")
+    fun getPopularMovies(@Query("page")page:Int, @Query("primary_release_year")year: String) : Single<MovieResponse>
+
+    @GET("movie/popular")
     fun getPopularMovies(@Query("page")page:Int) : Single<MovieResponse>
 
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.hishamabifarah.androidx_kotlin.mvvmMoviesApp.mvvmMovieData.ui.MVVMActivity
 import com.hishamabifarah.androidx_kotlin.mvvmMoviesApp.mvvmMovieData.ui.single_movie_details.SingleMovie
 import com.hishamabifarah.androidx_kotlin.navigationComponentsApp.MainActivity
 
@@ -42,9 +43,10 @@ class HomeActivity : AppCompatActivity() , View.OnClickListener {
             }
             R.id.button2 ->{
 
-                intent = Intent(applicationContext,
-                    SingleMovie::class.java)
-                intent.putExtra("id", 284053)
+//                intent = Intent(applicationContext,
+//                    SingleMovie::class.java)
+//                intent.putExtra("id", 284053)
+                intent = Intent(applicationContext, MVVMActivity::class.java)
 
             }
             R.id.button3 ->{

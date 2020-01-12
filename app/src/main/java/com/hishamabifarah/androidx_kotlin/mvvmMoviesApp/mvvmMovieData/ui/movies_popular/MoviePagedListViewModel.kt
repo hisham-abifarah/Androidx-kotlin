@@ -13,10 +13,9 @@ import io.reactivex.disposables.CompositeDisposable
  */
 class MoviePagedListViewModel(private val movieRepository: MoviePagedListRepository) : ViewModel() {
 
-
     private val compositeDisposable = CompositeDisposable()
 
-    val moviePagedList : LiveData<PagedList<Movie>> by lazy {
+    val moviePagedList: LiveData<PagedList<Movie>> by lazy {
         movieRepository.fetchLiveMoviePagedList(compositeDisposable)
     }
 

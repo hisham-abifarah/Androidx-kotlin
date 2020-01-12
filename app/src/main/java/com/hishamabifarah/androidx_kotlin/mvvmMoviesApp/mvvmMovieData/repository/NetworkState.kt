@@ -7,6 +7,7 @@ enum class Status {
     ENDOFLIST
 }
 
+
 //todo notes : constructor for Network State is (val status : String , val message: String)
 
 class NetworkState(val status: Status, val message: String) {

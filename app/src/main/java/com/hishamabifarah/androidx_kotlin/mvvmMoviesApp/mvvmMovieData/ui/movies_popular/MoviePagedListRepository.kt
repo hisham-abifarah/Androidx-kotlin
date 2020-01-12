@@ -34,12 +34,18 @@ class MoviePagedListRepository (private val apiInterface : TheMovieDBInterface) 
         return moviePagedList
     }
 
-    fun getNetworkState() : LiveData<NetworkState>{
-        //networkState is inside MovieDataSouce
-      // access networkstate mutable llivedata and transforming it to
-        // livedata from this movieLiveDataSource livedata
+//    fun getNetworkState() : LiveData<NetworkState>{
+//        //networkState is inside MovieDataSouce
+//      // access networkstate mutable llivedata and transforming it to
+//        // livedata from this movieLiveDataSource livedata
+//
+//        return Transformations.switchMap(MovieDataSource,NetworkState)(
+//            movieDataSourceFactory.movieLiveDataSource,MovieDataSource::networkState)
+//    }
 
-        return Transformations.switchMap(MovieDataSource,NetworkState)(
-            movieDataSourceFactory.movieLiveDataSource,MovieDataSource::networkState)
+    fun getNetworkState(): LiveData<NetworkState> {
+        return Transformations.switchMap<MovieDataSource, NetworkState>(
+            movieDataSourceFactory.movieLiveDataSource, MovieDataSource::networkState)
     }
+
 }

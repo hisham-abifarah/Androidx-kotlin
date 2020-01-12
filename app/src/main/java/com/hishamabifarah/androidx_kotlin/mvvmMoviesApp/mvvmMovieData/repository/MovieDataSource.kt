@@ -24,6 +24,7 @@ class MovieDataSource(
 ) : PageKeyedDataSource<Int, Movie>() {
 
     private var page = FIRST_PAGE
+    private var year = "1899"
 
     val networkState: MutableLiveData<NetworkState> = MutableLiveData()
 
@@ -35,6 +36,7 @@ class MovieDataSource(
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
+//            apiInterface.getPopularMovies(page,year)
             apiInterface.getPopularMovies(page)
                 .subscribeOn(Schedulers.io())
                 .subscribe({
@@ -53,6 +55,7 @@ class MovieDataSource(
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
+//            apiInterface.getPopularMovies(params.key,year)
             apiInterface.getPopularMovies(params.key)
                 .subscribeOn(Schedulers.io())
                 .subscribe({
